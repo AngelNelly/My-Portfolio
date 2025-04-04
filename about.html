@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Angela Chinweike</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="aos/dist/aos.css" />
+    <link rel="stylesheet" href="./bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="./animate.css-4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="./lineawesome-1.3.0/css/line-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./about.css" />
+  </head>
+
+  <body>
+    <header id="navbar-container"></header>
+    <div id="social-container"></div>
+
+    <section
+      id="about"
+      class="py-5"
+      style="background-color: var(--primary-color)"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="mx-auto" style="width: 60%">
+            <h2 class="fw-bold" style="color: var(--body-text)">About Me</h2>
+            <p
+              class="text-justify"
+              style="
+                text-align: justify;
+                color: var(--body-text-2) animate__animated animate__fadeIn;
+              "
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Hi, I'm <strong>Angela Chinweike</strong>, a digital skills
+              educator, freelancer, and workplace efficiency expert passionate
+              about helping beginners master essential office and computer
+              skills with ease. With over 15 years of experience in teaching,
+              administration, and creative writing, I have guided many
+              professionals—particularly new employees struggling with digital
+              tools—until they gained the confidence and competence needed to
+              excel in their roles. Now, as I expand my reach beyond workplace
+              training, I am committed to empowering more individuals who lack
+              digital skills, helping them stay employable and thrive in today’s
+              tech-driven world. Currently transitioning into Software
+              Engineering and Full Stack Web Development, I have mastered HTML
+              and CSS and now focused on Python, JavaScript, and Bootstrap to
+              build efficient, user-friendly digital solutions. I have a keen
+              interest in both front-end design and back-end functionality,
+              aiming to create seamless experiences for users. Beyond teaching
+              and coding, I enjoy exploring new tech trends, mentoring aspiring
+              professionals, and optimizing workflows with digital tools. With
+              <a
+                class="text-decoration-none"
+                href="https://drive.google.com/file/d/1LxRbsmLKJIzltjUWqmXU0TVhI7NHogDY/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <em id="">Office Hacks 101: The Smart Assistant’s Playbook</em>
+              </a>
+              , I shared practical strategies, step-by-step guidance, and
+              insider office hacks to help anyone boost productivity, build
+              confidence, and become an indispensable asset in the workplace.
+              Are you ready to sharpen your digital skills? Let’s make it happen
+              <a
+                href="projects.html"
+                class="animate__animated animate__bounce text-primary fw-bold text-decoration-none"
+                >here</a
+              >!
+            </p>
+
+            <a
+              href="#projects"
+              class="btn btn-primary"
+              style="background-color: var(--cardbackgroundcol)"
+              >SEE MY WORK</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="navbar-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading navbar:", error));
+      });
+    </script>
+    <div id="footer-container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          })
+          .catch((error) => console.error("Error loading footer:", error));
+      });
+    </script>
+
+    <div id="social-container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("social.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("social-container").innerHTML = data;
+          })
+          .catch((error) =>
+            console.error("Error loading social icons:", error)
+          );
+      });
+    </script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

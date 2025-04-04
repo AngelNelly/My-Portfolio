@@ -1,0 +1,296 @@
+:root {
+  --primary-color: #d4a886;
+  --secondary-color: #8b9aac;
+  --cardbackgroundcol: #3159bc;
+  --body-text: #333333;
+  --body-text-2: #36454f;
+  --textonblue: #c0c0c0;
+}
+
+body {
+  font-family: "Poppins", "Roboto", "Arial", sans-serif;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+/* Push the main content to take available space */
+.main-content {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--body-text-2);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--textonblue);
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+img {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: +2%;
+}
+
+.navbar-bg {
+  background-color: var(--cardbackgroundcol);
+}
+
+.animate__animated {
+  display: inline-block !important;
+}
+
+#logo span {
+  display: inline-block;
+  animation: rotateAnimation 5s linear infinite;
+  color: var(--textonblue);
+}
+/* Logo Animations Effects-AC Starts*/
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Logo Animations Effects-AC Ends*/
+
+/* h1 Animations Effects Starts-I'm Angela Chinweike Starts*/
+
+h1 {
+  animation: typewriter 2s ease-in-out infinite alternate;
+  color: var(--body-text-2);
+}
+@keyframes typewriter {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+/* h1 Animations Effects Ends-I'm Angela Chinweike Ends */
+
+h2 {
+  animation: zoomIn 5s infinite alternate;
+  color: var(--body-text-2);
+}
+
+/* h2 Animations Effects Starts*/
+@keyframes zoomIn {
+  0% {
+    transform: flash(0deg);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* h2 Animations Effects Ends*/
+
+/* Mini About Section Starts*/
+
+/* Buttons */
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--cardbackgroundcol);
+  color: var(--textonblue); /* Light contrast */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--body-text);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  list-style: solid;
+}
+
+/* Links */
+a {
+  color: #3159bc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8b9aac;
+}
+
+.container {
+  width: 100%; /* This will fill the parent container */
+  text-align: center;
+}
+
+.p-intro {
+  text-align: justify;
+  max-width: 50%;
+  display: inline-block;
+  overflow: hidden;
+  width: auto;
+  animation: typing 5s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+/* p-intro animations Starts- I'm a Software Engineer and...*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* p-intro animations Ends- I'm a Software Engineer and...*/
+
+.profile-img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .social-icons {
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .social-icons .btn-icon {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-container {
+    align-items: flex-start;
+  }
+}
+/* Mini About Section Ends*/
+
+/* Social Icons Styling starts */
+.floating-social {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+
+
+.social-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--body-text);
+  margin-bottom: 10px;
+  animation: flash 1.5s infinite;
+}
+
+/* I'm social Animations starts here */
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* I'm social Animations Starts */
+
+.social-icons {
+  display: block;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mysoc {
+  display: block;
+  text-decoration: none;
+  color: var(--body-text);
+  font-size: 40px;
+  padding: 10px;
+}
+
+.mysoc:hover {
+  color: var(--cardbackgroundcol);
+  transform: translateY(-3px);
+}
+
+/* Responsive for Small Screens */
+
+@media (max-width: 768px) {
+  .floating-social {
+    position: relative;
+    align-items: center;
+    right: auto;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mysoc {
+    display: inline-block;
+    font-size: 30px;
+    padding: 8px;
+    margin: 5px;
+    gap: 5px;
+  }
+}
+/* Social Icons Styling Ends */
+
+/* Footer stays at the bottom */
+
+.footer-section {
+  background-color: var(--cardbackgroundcol);
+  color: var(--textonblue); /* Ensure text is white for contrast */
+  padding: 1rem 0;
+}
+
+.footersoc{
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--body-text);
+  font-size: 40px;
+ 
+}
+.footer {
+  background-color: #8b9aac !important; /* Your secondary color */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}

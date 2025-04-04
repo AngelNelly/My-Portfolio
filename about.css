@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #d4a886;
+  --secondary-color: #8b9aac;
+  --cardbackgroundcol: #3159bc;
+  --body-text: #333333;
+  --body-text-2: #36454f;
+  --textonblue: #c0c0c0;
+}
+
+#mybook {
+  color: var(--cardbackgroundcol) !important;
+  font-weight: bolder;
+}
+
+/* Define the animation */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--cardbackgroundcol);
+  color: var(--textonblue); /* Light contrast */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--body-text);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  list-style: solid;
+}
