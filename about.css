@@ -14,22 +14,21 @@
 
 /* Define the animation */
 
-.btn-primary {
+#btnprojects {
   display: inline-flex;
   align-items: center;
   padding: 10px 20px;
   background-color: var(--cardbackgroundcol);
-  color: var(--textonblue); /* Light contrast */
+  color: var(--textonblue);
   border-radius: 5px;
   text-decoration: none;
+  border: none !important;
   font-size: 16px;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: var(--body-text);
+#btnprojects:hover {
+  background-color: var(--body-text) !important;
   color: var(--primary-color);
-  transform: translateY(-3px);
-  list-style: solid;
+  border: none !important;
 }

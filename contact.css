@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #d4a886;
+  --secondary-color: #8b9aac;
+  --cardbackgroundcol: #3159bc;
+  --body-text: #333333;
+  --body-text-2: #36454f;
+  --textonblue: #c0c0c0;
+}
+
+/* Background and Button Styling */
+.bg-custom-dark {
+  background-color: var(--body-text);
+  color: var(--body-text);
+}
+
+.btn-custom {
+  background-color: var(--cardbackgroundcol);
+  color: var(--textonblue);
+  font-weight: bold;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--primary-color);
+  color: var(--body-text-2);
+}
+
+/* Customized the placeholeder box when clicked so that it does not turn white*/
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--primary-color);
+  color: var(--body-text);
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Added focus styles to maintain the same color when it is clicked */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: var(--primary-color);
+  color: var(--body-text);
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#resume-link {
+  background-color: var(--cardbackgroundcol);
+  color: var(--textonblue);
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#resume-link:hover {
+  background-color: var(--body-text);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 991px) {
+  .floating-social {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-text {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--body-text);
+  }
+
+  .mysoc {
+    font-size: 28px;
+    color: var(--body-text);
+    padding: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .mysoc:hover {
+    transform: scale(1.2);
+    color: var(--cardbackgroundcol);
+  }
+}
