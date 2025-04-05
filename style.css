@@ -128,7 +128,6 @@ h2 {
 
 /* Links */
 a {
-  color: #3159bc;
   text-decoration: none;
 }
 
@@ -137,7 +136,7 @@ a:hover {
 }
 
 .container {
-  width: 100%; /* This will fill the parent container */
+  width: 100%;
   text-align: center;
 }
 
@@ -172,26 +171,6 @@ a:hover {
   align-items: center;
 }
 
-/* Responsive Design */
-
-@media (max-width: 600px) {
-  .social-icons {
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  .social-icons .btn-icon {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 992px) {
-  .text-container {
-    align-items: flex-start;
-  }
-}
-/* Mini About Section Ends*/
-
 /* Social Icons Styling starts */
 .floating-social {
   position: absolute;
@@ -203,7 +182,6 @@ a:hover {
   z-index: 1000;
 }
 
-
 .social-text {
   font-size: 18px;
   font-weight: bold;
@@ -214,14 +192,15 @@ a:hover {
 
 /* I'm social Animations starts here */
 @keyframes flash {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
 }
-/* I'm social Animations Starts */
+/* I'm social Animations Ends */
 
 .social-icons {
   display: block;
@@ -241,54 +220,60 @@ a:hover {
   color: var(--cardbackgroundcol);
   transform: translateY(-3px);
 }
+/* Social Icons Styling ends */
 
-/* Responsive for Small Screens */
-
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .floating-social {
-    position: relative;
-    align-items: center;
+    position: relative; /* Remove absolute positioning */
     right: auto;
-    left: 50%;
-    top: 20px;
-    transform: translateX(-50%);
-    width: 90%;
-    padding-top: 30px;
+    top: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column; /* Stack text and icons vertically */
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px; /* Space below header */
+  }
+
+  .social-text {
+    order: -1; /* Move the text above icons */
+    text-align: center;
+    font-size: 16px; /* Adjust font size for small screens */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space below text */
   }
 
   .social-icons {
-    flex-direction: row;
+    flex-direction: row; /* Align icons in a row */
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px; /* Space between icons */
   }
 
   .mysoc {
-    display: inline-block;
-    font-size: 30px;
-    padding: 8px;
-    margin: 5px;
-    gap: 5px;
+    font-size: 30px; /* Slightly smaller for small screens */
+    padding: 5px;
   }
 }
-/* Social Icons Styling Ends */
 
-/* Footer stays at the bottom */
+/* Footer styling starts */
 
 .footer-section {
   background-color: var(--cardbackgroundcol);
-  color: var(--textonblue); /* Ensure text is white for contrast */
+  color: var(--textonblue);
   padding: 1rem 0;
 }
 
-.footersoc{
+.footersoc {
   justify-content: space-around;
   align-items: stretch;
   color: var(--body-text);
   font-size: 40px;
- 
 }
 .footer {
-  background-color: #8b9aac !important; /* Your secondary color */
+  background-color: #8b9aac !important; /* Your secondary color*/
   color: white;
   text-align: center;
   padding: 20px 0;
