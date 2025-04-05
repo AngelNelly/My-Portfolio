@@ -252,7 +252,7 @@ a:hover {
   }
 
   .mysoc {
-    font-size: 30px; /* Slightly smaller for small screens */
+    font-size: 30px;
     padding: 5px;
   }
 }
@@ -271,10 +271,20 @@ a:hover {
   color: var(--body-text);
   font-size: 40px;
 }
-.footer {
-  background-color: #8b9aac !important; /* Your secondary color*/
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
+
+.footersoc:hover{
+  color: var(--primary-color);
+}
+
+#footerpara{
+  color: var(--textonblue);
+ }
+
+ #footername {
+  color: var(--primary-color);
+  font-weight: bold;
+  
+}
+#footername:hover{
+  color: var(--textonblue);
 }
